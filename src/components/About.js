@@ -9,7 +9,7 @@ function About() {
             Suhaib
             <span className="text-primary"> Hassan</span>
           </h1>
-          <h3>Full Stack Engineer</h3>
+          <h3>Full Stack Engineer | Updated</h3>
           <div className="subheading mb-5">
             Istanbul, Turkey
             <br />
