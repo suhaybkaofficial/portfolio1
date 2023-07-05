@@ -27,9 +27,9 @@ jobs:
     - name: Deploy to SFTP server
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        server: ${{ secrets.PORTFOLIO_SITE_SERVER }}
+        server: sutherlin.dreamhost.com
         port: 22
-        username: ${{ secrets.PORTFOLIO_SITE_USER }}
+        username: dh_z469ux
         password: ${{ secrets.PORTFOLIO_SITE_PASS }}
         local-dir: build/
         remote-dir: suhaybka.me
