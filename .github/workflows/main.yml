@@ -1,4 +1,4 @@
-name: SFTP Deploy 
+name: Deploy to SFTP
 
 on:
   push:
@@ -10,26 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 14
-    
-    - name: Install dependencies
-      run: npm install
-  
-    - name: Build
-      run: npm run build
- 
-    - name: Deploy to SFTP server
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        server: sutherlin.dreamhost.com
-        port: 22
-        username: dh_z469ux
-        password: ${{ secrets.PORTFOLIO_SITE_PASS }}
-        local-dir: build/
-        remote-dir: suhaybka.me
+      - name: Clear npm cache
+        run: npm cache clean --force
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build the React app
+        run: npm run build
+
+      - name: Deploy to SFTP
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: sutherlin.dreamhost.com
+          ftp-username: dh_z469ux
+          ftp-password: ${{ secrets.PORTFOLIO_SITE_PASS }}
+          local-dir: build/
+          remote-dir: suhaybka.me
+          ftp-port: 22
