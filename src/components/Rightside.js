@@ -1,6 +1,4 @@
 import React from 'react'
-import { useContext } from 'react'
-import { AppContext } from '../utils/AppProvider'
 import About from './About'
 import Contact from './Contact'
 import Education from './Education'
