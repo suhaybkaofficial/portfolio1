@@ -32,4 +32,4 @@ jobs:
         username: ${{ secrets.PORTFOLIO_SITE_USER }}
         password: ${{ secrets.PORTFOLIO_SITE_PASS }}
         local-dir: build/
-        remote-dir: /suhaybka.me
+        remote-dir: suhaybka.me
