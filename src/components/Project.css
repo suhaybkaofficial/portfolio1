@@ -1,0 +1,80 @@
+.project-showcase {
+  text-align: center;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  width: 280px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: rotate(2deg);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-top: -35px;
+}
+
+.project-details {
+  padding: 1rem;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #777;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.cta-button, .cta-button a {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #00407d;
+  color: #fff !important;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #1e2e3f;
+}
+
+@media (max-width: 685px) {
+  .project-card {
+    width: 100%;
+  }
+  .project-image{
+    object-fit: cover;
+  }
+}
