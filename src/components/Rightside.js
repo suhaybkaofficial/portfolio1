@@ -11,7 +11,6 @@ import Work from './Work'
 import Projects from './Projects'
 
 function Rightside() {
-    const {state} = useContext(AppContext)
 
     return (
         <div className="container-fluid p-0 ">
