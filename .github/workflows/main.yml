@@ -25,14 +25,14 @@ jobs:
         run: npm install
 
       - name: Build the React app
-        run: npm run build
+        run: npm run build -- --verbose
 
       - name: Deploy to SFTP
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           ftp-server: sutherlin.dreamhost.com
           ftp-username: dh_z469ux
-          ftp-password: ${{ secrets.PORTFOLIO_SITE_PASS }}
+          ftp-password: ${{ secrets.SFTP_PASSWORD }}
           local-dir: build/
           remote-dir: suhaybka.me
           ftp-port: 22
